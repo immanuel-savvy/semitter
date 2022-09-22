@@ -1,0 +1,17 @@
+{
+  "name": "semitter",
+  "version": "1.0.0",
+  "description": "Event emitter",
+  "main": "emitter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "events",
+    "emitter",
+    "listeners",
+    "handlers"
+  ],
+  "author": "Savvy",
+  "license": "ISC"
+}
