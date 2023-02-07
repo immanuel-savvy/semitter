@@ -1,6 +1,6 @@
 {
   "name": "semitter",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "description": "Event emitter",
   "main": "emitter.js",
   "scripts": {
@@ -12,6 +12,10 @@
     "listeners",
     "handlers"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/immanuel-savvy/semitter"
+  },
   "author": "Savvy",
   "license": "ISC"
 }

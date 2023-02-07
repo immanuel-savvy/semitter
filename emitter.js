@@ -12,17 +12,19 @@ class Emitter {
       return_.push(listener && (await listener(data)));
     }
 
-    if (return_.find((r) => r))
-      callback &&
-        typeof callback === "function" &&
-        (await callback(return_[0]));
+    typeof callback === "function" && (await callback(return_[0]));
   };
 
-  listen = (event, listener) => {
+  listen = (event, listener, single) => {
     let listeners = this.events[event] || new Array();
-    listeners.push(listener);
+
+    if (single) listeners = new Array(listener);
+    else listeners.push(listener);
+
     this.events[event] = listeners;
   };
+
+  single_listener = (event, listener) => this.listen(event, listener, true);
 
   remove_listener = (event, listener) => {
     let listeners = this.events[event] || new Array();
